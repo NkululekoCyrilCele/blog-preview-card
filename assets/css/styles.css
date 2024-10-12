@@ -1,0 +1,128 @@
+/* Custom Styles */
+:root {
+    --font-family: "Figtree", sans-serif;
+    --font-weight-regular: 500;
+    --font-weight-bold: 800;
+    --yellow: hsl(47, 88%, 63%);
+    --white: hsl(0, 0%, 100%);
+    --gray-500: hsl(0, 0%, 42%);
+    --gray-950: hsl(0, 0%, 7%);
+    --main-font-size: 1rem;
+    --card-padding: 1.5rem;
+    --focus-outline-color: var(var(--yellow));
+    --border-radius: 0.75rem;
+}
+
+/* General Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main Styles */
+body {
+    font-family: var(--font-family);
+    background-color: var(--yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main {
+    padding: var(--card-padding);
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 345px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover,
+.card:focus {
+    transform: translateX(-10px);
+    outline: none;
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    border-radius: 35px;
+    padding: var(--card-padding);
+}
+
+.card-content {
+    padding: 0 var(--card-padding) var(--card-padding);
+}
+
+.tag {
+    background-color: var(--yellow);
+    color: var(--gray-950);
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+    font-size: 0.875rem;
+    font-weight: var(--font-weight-bold);
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.date {
+    font-size: 0.875rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--gray-500);
+    margin: 0.75rem auto;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+    color: var(--gray-950);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 1rem;
+  }
+
+  .card-description {
+    font-size: 14px;
+    color: var(--gray-500);
+    margin-bottom: 1.5rem;
+  }
+
+  .card-footer {
+    display: flex;
+    align-items: center;
+  }
+
+  .author-img {
+    width: 40px;
+    height: auto;
+    margin-right: 0.75rem;
+  }
+
+  .author-name {
+    font-size: 0.875rem;
+    color: var(--gray-950);
+    font-weight: var(--font-weight-bold);
+  }
+
+  /* Focus states */
+.card:focus .tag,
+.card:hover .tag {
+  background-color: var(--gray-500);
+  color: var(--white);
+}
+
+.card:hover .card-title,
+.card:focus .card-title {
+  color: var(--yellow);
+}
+
+/* .attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); } */
